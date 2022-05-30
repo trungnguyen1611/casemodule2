@@ -10,6 +10,9 @@ export class Account {
     }
 }
 
+let alert=document.getElementById('wrong-signup');
+alert.hidden=true;
+
 let btnSign = document.getElementById('sign_up') as HTMLButtonElement;
 btnSign.addEventListener('click', signUp);
 
@@ -38,7 +41,7 @@ function signUp() {
                 flag=false;
                 (document.getElementById('form3Example3') as HTMLInputElement).value='';
                 (document.getElementById('form3Example4') as HTMLInputElement).value='';
-                alert('Tài khoản đã tồn tại');
+                alert.hidden=false;
                 return;
             }else if(_name.value !="" && _pass.value !=""){
                 flag=true;

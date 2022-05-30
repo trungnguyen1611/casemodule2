@@ -3,6 +3,9 @@ import {Account} from "./signup.js";
 let btnLogin=document.getElementById('log-in') as HTMLButtonElement;
 btnLogin.addEventListener('click',login);
 
+let alert=document.getElementById('wrong');
+alert.hidden=true;
+
 function getDataLocal(): Account[] | null {
         return JSON.parse(localStorage.getItem('acc'));
 }
@@ -27,6 +30,8 @@ function login(){
         if(flag==false){
                 (document.getElementById('form2Example1') as HTMLInputElement).value='';
                 (document.getElementById('form2Example2') as HTMLInputElement).value='';
-                alert('Sai tên đăng nhập hoặc mật khẩu');
+                // alert('Sai tên đăng nhập hoặc mật khẩu');
+                alert.hidden=false;
         }
 }
+

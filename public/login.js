@@ -1,5 +1,7 @@
 var btnLogin = document.getElementById('log-in');
 btnLogin.addEventListener('click', login);
+var alert = document.getElementById('wrong');
+alert.hidden = true;
 function getDataLocal() {
     return JSON.parse(localStorage.getItem('acc'));
 }
@@ -22,7 +24,8 @@ function login() {
     if (flag == false) {
         document.getElementById('form2Example1').value = '';
         document.getElementById('form2Example2').value = '';
-        alert('Sai tên đăng nhập hoặc mật khẩu');
+        // alert('Sai tên đăng nhập hoặc mật khẩu');
+        alert.hidden = false;
     }
 }
 export {};

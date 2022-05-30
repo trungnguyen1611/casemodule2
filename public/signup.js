@@ -6,6 +6,8 @@ var Account = /** @class */ (function () {
     return Account;
 }());
 export { Account };
+var alert = document.getElementById('wrong-signup');
+alert.hidden = true;
 var btnSign = document.getElementById('sign_up');
 btnSign.addEventListener('click', signUp);
 function getDataLocal() {
@@ -31,7 +33,7 @@ function signUp() {
                 flag = false;
                 document.getElementById('form3Example3').value = '';
                 document.getElementById('form3Example4').value = '';
-                alert('Tài khoản đã tồn tại');
+                alert.hidden = false;
                 return;
             }
             else if (_name.value != "" && _pass.value != "") {

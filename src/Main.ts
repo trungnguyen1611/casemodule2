@@ -38,13 +38,13 @@ export function search() {
     let email = (document.getElementById('input-search-email') as HTMLInputElement).value;
     for (let i = 0; i < data.length; i++) {
         // @ts-ignore
-        if (name == data[i]._name) {
+        if (name == data[i]._name ||
             // @ts-ignore
-            // code == data[i]._code ||
+            code == data[i]._code ||
             // @ts-ignore
-            // group == data[i]._class ||
+            group == data[i]._class ||
             // @ts-ignore
-            // email == data[i]._email) {
+            email == data[i]._email) {
             html += `<tr>`;
             html += `<td>${i + 1}</td>`;
             // @ts-ignore
@@ -120,4 +120,3 @@ export function editStudent() {
 }
 
 editStudent();
-

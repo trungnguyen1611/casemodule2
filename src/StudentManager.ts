@@ -54,11 +54,11 @@ export class StudentManager {
     }
 
     getDataLocal(): Student[] | null {
-        return JSON.parse(localStorage.getItem('list'));
+        return JSON.parse(localStorage.getItem('listStudent'));
     }
 
     saveData(newData) {
-        localStorage.setItem('list', JSON.stringify(newData));
+        localStorage.setItem('listStudent', JSON.stringify(newData));
     }
 
     sort() {

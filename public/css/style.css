@@ -30,7 +30,6 @@ header{
     background-size: 100%;
 }
 
-/*main{*/
-/*    background-image: url("bgmain.png");*/
-/*    background-size: 100%;*/
-/*}*/
+#log-out{
+    background-color: #b21f2d;
+}

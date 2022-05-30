@@ -29,13 +29,13 @@ export function search() {
     var email = document.getElementById('input-search-email').value;
     for (var i = 0; i < data.length; i++) {
         // @ts-ignore
-        if (name == data[i]._name) {
+        if (name == data[i]._name ||
             // @ts-ignore
-            // code == data[i]._code ||
+            code == data[i]._code ||
             // @ts-ignore
-            // group == data[i]._class ||
+            group == data[i]._class ||
             // @ts-ignore
-            // email == data[i]._email) {
+            email == data[i]._email) {
             html += "<tr>";
             html += "<td>".concat(i + 1, "</td>");
             // @ts-ignore

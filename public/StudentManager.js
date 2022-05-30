@@ -47,10 +47,10 @@ var StudentManager = /** @class */ (function () {
         this.showList();
     };
     StudentManager.prototype.getDataLocal = function () {
-        return JSON.parse(localStorage.getItem('list'));
+        return JSON.parse(localStorage.getItem('listStudent'));
     };
     StudentManager.prototype.saveData = function (newData) {
-        localStorage.setItem('list', JSON.stringify(newData));
+        localStorage.setItem('listStudent', JSON.stringify(newData));
     };
     StudentManager.prototype.sort = function () {
         var data = this.getDataLocal();
